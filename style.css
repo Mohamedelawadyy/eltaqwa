@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+}
+:root {
+  --primary-color: #1a7b35;
+  --secondary-color: #8cc53e;
+}
+
+.custom-btn {
+  background: linear-gradient(to right, var(--primary-color), #56b87079);
+  color: #cdecba;
+  transition: 0.5s;
+}
+.custom-btn:hover {
+  background: linear-gradient(to right, #56b870, #56b870);
+  color: #cdecba;
+}
+ul li a.nav-link {
+  font-weight: 600;
+  color: var(--primary-color) !important;
+  transition: 0.3s;
+}
+ul li a.nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Overlay Styles */
+.carousel-item {
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  z-index: 1;
+}
+
+.carousel-item img {
+  object-fit: cover; /* Makes sure the image fully covers the area */
+  width: 100%; /* Ensures the image takes full width of the container */
+  z-index: 0; /* Keeps the image behind the overlay */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 0;
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.footer-contact p a {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+.footer-contact p a:hover {
+  color: var(--secondary-color);
+}
+
+/*category page*/
+.banner-section {
+  height: 30vh;
+  background-image: url("./images/slide.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.banner-content {
+  z-index: 2;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    #56b87079
+  ); /* Gradient background */
+  color: #fff; /* Set text color to white for better contrast */
+  border-radius: 20px; /* Rounded background for the title */
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 1.8rem;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 8px solid var(--primary-color);
+  border-radius: 0 0 10px 10px;
+  padding: 10px 12px;
+}
+.product-card .card-footer {
+  margin-bottom: 0.5rem;
+}

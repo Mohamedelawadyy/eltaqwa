@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElTaqwa-categories</title>
+    <link rel="icon" href="./images/logo-1.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="./images/logo.png" width="300" height="50" alt="logo"
+                        srcset=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categories">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="banner-section position-relative text-center text-light">
+            <div class="banner-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            <div class="container h-100 d-flex align-items-center justify-content-center">
+                <div class="banner-content">
+                    <h1 class="banner-title">Categories</h1>
+                </div>
+            </div>
+        </section>
+        <section class="categories-section py-5">
+            <div class="container">
+                <div id="categories-container" class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4"></div>
+            </div>
+        </section>
+
+        <footer class="bg-light py-4">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <!-- Logo Section -->
+                <div class="footer-logo mb-3 mb-md-0 text-center text-md-start">
+                    <img src="./images/logo-1.png" alt="EL-Taqwa Logo" width="200" height="200">
+                </div>
+
+                <!-- Links Section -->
+                <ul class="nav flex-column justify-content-center mb-3 mb-md-0 text-center">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/categories" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/products" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Contact Information Section -->
+                <div class="footer-contact text-center text-md-end">
+                    <p class="mb-1">
+                        <a href="mailto:info@el-taqwa.com" class="text-decoration-none">info@el-taqwa.com</a>
+                    </p>
+                    <p class="mb-1">
+                        <a href="tel:+1234567890" class="text-decoration-none">+1-234-567-890</a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="https://www.google.com/maps?q=123+Main+Street,+City,+Country" target="_blank"
+                            rel="noopener noreferrer" class="text-decoration-none">
+                            123 Main Street, City, Country
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="text-center mt-3">
+                <p class="text-dark mb-0">&copy; 2025 EL-Taqwa. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="categories.js"></script>
+</body>
+
+</html>

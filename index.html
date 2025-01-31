@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL-Taqwa</title>
+    <link rel="icon" href="./images/logo-1.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="./images/logo.png" width="300" height="50" alt="logo"
+                        srcset=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categories">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Existing Carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner w-100">
+                <div class="carousel-item active">
+                    <img src="./images/slide.jpg" class="d-block w-100" height="400" alt="slide">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slide2.jpg" class="d-block w-100" height="400" alt="slide">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slide3.jpg" class="d-block w-100" height="400" alt="slide">
+                    <div class="carousel-overlay"></div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div id="category-carousel" class="splide mt-5">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide text-center">
+                        <img src="./images/logo-1.png" class="d-block w-100 rounded-circle" height="300"
+                            alt="category1">
+                        <div class="splide-caption">
+                            <h5>Category 1</h5>
+                        </div>
+                    </li>
+                    <li class="splide__slide text-center">
+                        <img src="./images/logo-1.png" class="d-block w-100 rounded-circle" height="300"
+                            alt="category2">
+                        <div class="splide-caption">
+                            <h5>Category 2</h5>
+                        </div>
+                    </li>
+                    <li class="splide__slide text-center">
+                        <img src="./images/logo-1.png" class="d-block w-100 rounded-circle" height="300"
+                            alt="category3">
+                        <div class="splide-caption">
+                            <h5>Category 3</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <section class="container py-5">
+            <h2 class="text-center mb-5">Our Products</h2>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4" id="product-container">
+                <!-- Products will be rendered here by JavaScript -->
+            </div>
+            <div id="modal-container"></div>
+
+        </section>
+
+        <footer class="bg-light py-4">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <!-- Logo Section -->
+                <div class="footer-logo mb-3 mb-md-0 text-center text-md-start">
+                    <img src="./images/logo-1.png" alt="EL-Taqwa Logo" width="200" height="200">
+                </div>
+
+                <!-- Links Section -->
+                <ul class="nav flex-column justify-content-center mb-3 mb-md-0 text-center">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/categories" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/products" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Contact Information Section -->
+                <div class="footer-contact text-center text-md-end">
+                    <p class="mb-1">
+                        <a href="mailto:info@el-taqwa.com" class="text-decoration-none">info@el-taqwa.com</a>
+                    </p>
+                    <p class="mb-1">
+                        <a href="tel:+1234567890" class="text-decoration-none">+1-234-567-890</a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="https://www.google.com/maps?q=123+Main+Street,+City,+Country" target="_blank"
+                            rel="noopener noreferrer" class="text-decoration-none">
+                            123 Main Street, City, Country
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="text-center mt-3">
+                <p class="text-dark mb-0">&copy; 2025 EL-Taqwa. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
