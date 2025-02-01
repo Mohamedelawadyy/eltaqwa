@@ -22,6 +22,7 @@ const products = [
     image: "./images/logo-1.png",
     alt: "product1",
     isPacket: false,
+    price: 50,
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ const products = [
     image: "./images/logo-1.png",
     alt: "product2",
     isPacket: false,
+    price: 50,
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const products = [
     image: "./images/logo-1.png",
     alt: "product3",
     isPacket: true,
+    price: 50,
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ const products = [
     image: "./images/logo-1.png",
     alt: "product4",
     isPacket: true,
+    price: 50,
   },
 ];
 
@@ -73,9 +77,9 @@ function renderProducts() {
     const buttons = product.isPacket
       ? `
         <div class="card-footer d-flex justify-content-between">
-          <button class="btn btn-primary" onclick='renderModal(${JSON.stringify(
+          <button class="btn custom-btn" onclick='renderModal(${JSON.stringify(
             product
-          )})'>Buy Now</button>
+          )})'>Buy with GR</button>
         </div>
       `
       : `<button class="btn custom-btn">Add to Cart</button>`;
@@ -135,33 +139,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }).mount();
 });
 
-// Function to render the modal
 function renderModal(product) {
   const modalContainer = document.getElementById("modal-container");
 
-  // Generate weight options if the product is a packet
-  const weightOptions = product.isPacket
-    ? `<label for='weight'>Select Weight:</label>
-       <select id='weight' class='form-select'>
-         <option value='10g'>10g</option>
-         <option value='50g'>50g</option>
-         <option value='100g'>100g</option>
-       </select>`
-    : `<label for='quantity'>Quantity:</label>
-       <input type='number' id='quantity' class='form-control' value='1' min='1'>`;
+  let basePrice = product.price; // Get product's base price
 
   modalContainer.innerHTML = `
     <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">${product.name}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body text-center">
-            <img src="${product.image}" class="img-fluid" alt="${product.alt}">
-            <p>${product.description}</p>
-            ${weightOptions}
+          <div class=" d-flex flex-row w-100">
+          
+                  <img src="${product.image}" class="w-50 mb-3" alt="${
+    product.alt
+  }">
+        <div class=" w-100">
+        <h5 class="modal-title">${product.name}</h5>
+        <p>${product.description}</p>
+        <label for="weight">Enter Weight (g):</label>
+        <input type="number" id="weight" class="form-control" value="10" min="1">
+        <p class="mt-2"><strong>Total Price: $<span id="total-price">${(
+          basePrice * 10
+        ).toFixed(2)}</span></strong></p>
+        </div>
+          </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary">Confirm Purchase</button>
@@ -172,9 +177,19 @@ function renderModal(product) {
     </div>
   `;
 
-  // Show the modal
   const modal = new bootstrap.Modal(document.getElementById("productModal"));
   modal.show();
+
+  // Get the weight input field and price display
+  const weightInput = document.getElementById("weight");
+  const priceDisplay = document.getElementById("total-price");
+
+  // Event listener for input change
+  weightInput.addEventListener("input", () => {
+    let weight = parseFloat(weightInput.value) || 1; // Default to 1 if input is empty or invalid
+    if (weight < 1) weight = 1; // Prevent negative or zero input
+    priceDisplay.textContent = (basePrice * weight).toFixed(2);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);

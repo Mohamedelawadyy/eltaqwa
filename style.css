@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   max-width: 100%;
+  background-color: #eff3f4;
 }
 :root {
   --primary-color: #1a7b35;
@@ -113,10 +114,39 @@ ul li a.nav-link:hover {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-bottom: 8px solid var(--primary-color);
-  border-radius: 0 0 10px 10px;
   padding: 10px 12px;
+  border: 2px solid #bcab23;
+  border-radius: 7px;
 }
 .product-card .card-footer {
   margin-bottom: 0.5rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}
+
+h2,
+h5 {
+  color: var(--primary-color);
+}
+
+.table th {
+  background-color: hsl(39deg 56.88% 59.74%);
+  color: white;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.btn-primary {
+  background-color: hsl(39deg 56.88% 59.74%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color) !important;
 }
